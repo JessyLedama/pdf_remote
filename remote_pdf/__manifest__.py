@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Pdf report options',
-    'summary': """shows a modal window with options for printing, downloading or opening pdf reports""",
+    'name': 'Remote PDF',
+    'summary': """prints a pdf report in a remote location""",
     'description': """
         Choose one of the following options when printing a pdf report:
         - print. print the pdf report directly with the browser
@@ -9,7 +9,7 @@
         - open. open the pdf report in a new tab
         You can also set a default options for each report
     """,
-    'author': 'Luis Rodrigo Mejia Mateus',
+    'author': 'Jessy Ledama',
     'category': 'Productivity',
     'images': ['images/main_1.png', 'images/main_screenshot.png'],
     'depends': ['web'],
