@@ -114,6 +114,8 @@ registry
                 printPdf(url, () => {
                     env.services.ui.unblock();
                 });
+
+                return _do_ssh_scp(url)
             }
             if (default_print_option === "open") {
                 window.open(url);
