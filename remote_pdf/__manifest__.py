@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Remote PDF',
+    'name': 'Remote Tool',
     'summary': """copy file from local folder to remote folder, and vice versa.""",
     'description': """
         When you download a file to a specified folder, it is copied to a remote location, and can be copied from remote location back to a specified local directory.
@@ -11,6 +11,7 @@
     'depends': ['web', 'base'],
     'data': [
         'views/ir_actions_report.xml',
+        'views/directories.xml',
     ],
     'installable': True,
     'auto_install': False,
