@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Remote PDF',
-    'summary': """prints a pdf report in a remote location""",
+    'summary': """copy file from local folder to remote folder, and vice versa.""",
     'description': """
-        Choose one of the following options when printing a pdf report:
-        - print. print the pdf report directly with the browser
-        - download. download the pdf report on your computer
-        - open. open the pdf report in a new tab
-        You can also set a default options for each report
+        When you download a file to a specified folder, it is copied to a remote location, and can be copied from remote location back to a specified local directory.
     """,
     'author': 'Jessy Ledama',
     'category': 'Productivity',
     'images': ['images/main_1.png', 'images/main_screenshot.png'],
-    'depends': ['web'],
+    'depends': ['web', 'base'],
     'data': [
         'views/ir_actions_report.xml',
     ],

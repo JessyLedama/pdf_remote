@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List/Tree View -->
+        <record model="ir.ui.view" id="directories_list_view">
+            <field name="name">Directories View</field>
+            <field name="model">ssh.scp</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <tree string="Local Directories">
+                    <field name="localIn"/>
+                    <field name="localOut"/>
+                </tree>
+
+                <tree string="Remote Directories">
+                    <field name="remoteIn"/>
+                    <field name="remoteOut"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="directories_form_view">
+            <field name="name">Directories View</field>
+            <field name="model">ssh.scp</field>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <!-- view content: <form>, <tree>, <graph>, ... -->
+                <form string="New Directory Collection">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <separator string="Local Directories" colspan="2"/>
+                            <field name="localIn"/>
+                            <field name="localOut"/>
+                        </group>
+
+                        <group colspan="2" col="2">
+                            <separator string="Remote Directories" colspan="2"/>
+                            <field name="remoteIn"/>
+                            <field name="remoteOut"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

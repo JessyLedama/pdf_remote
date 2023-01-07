@@ -1,3 +1,4 @@
+from numpy import require
 from paramiko import SSHClient
 from scp import SCPClient
 
@@ -5,9 +6,21 @@ class SSHSCP(models.Model):
     _name = "ssh.scp"
     _description = "Send Invoice To Remote Location"
 
+    owner_id = Many2one(res.users, ondelete='set null', domain=lambda self: [('res_id', 'in', self.env.user.id)])
     host=fields.Char(string="Host IP", required=True)
     username=fields.Char(string="Username", required=True)
     password=fields.Char(string="Password", required=True)
+
+
+    localIn = fields.Char(string="Local IN directory", required=True)
+    localOut = fields.Char(string="Local OUT directory", required=True)
+
+    remoteIn = fields.Char(string="Remote IN directory", required=True)
+    remoteOut = fields.Char(string="Remote OUT directory", required=True)
+
+    def _getCurrentUser():
+        self.user_id = self.env.uid
+
 
     def _do_ssh_scp():
         ssh = SSHClient()
